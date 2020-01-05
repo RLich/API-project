@@ -17,13 +17,7 @@ def test_load_one_comment_in_post_13():
     response = requests.get(config.url_comments, params=payload)
     assert response.status_code == 200
 
-    # wybieram cztery pola, wedlug ktorych ma zostac dokonana asercja
-    field_1 = 'postId'
-    field_2 = 'id'
-    field_3 = 'email'
-    field_4 = 'body'
-
-    # tworze liste pol do pozniejszej asercji
+    # tworze liste pol do asercji
     list_of_fields_to_check = ['postId', 'id', 'email', 'body']
 
     # iteruje liste po polach, dla ktorych zwracam wartosc i sprawdzam, czy na pewno jest niepusta
